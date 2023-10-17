@@ -1,13 +1,14 @@
 import {
   FaDiagramProject,
   FaEnvelope,
-  FaFacebookF,
+  // FaFacebookF,
   FaGithub,
   FaHouse,
   FaLinkedinIn,
   FaRenren,
   FaUser,
-  FaYoutube,
+  // FaYoutube,
+  FaTwitter,
 } from "react-icons/fa6";
 import {
   ChatApp,
@@ -22,29 +23,35 @@ import {
 } from "../assets";
 
 export const Socials = [
-  {
-    id: `facebook-${Date.now()}`,
-    Icon: FaFacebookF,
-    uril: "",
-    color: "#1877F2",
-  },
+  // {
+  //   id: `facebook-${Date.now()}`,
+  //   Icon: FaFacebookF,
+  //   uri: "",
+  //   color: "#1877F2",
+  // },
   {
     id: `linkedin-${Date.now()}`,
     Icon: FaLinkedinIn,
-    uril: "",
+    uri: "",
     color: "#0072b1",
   },
   {
     id: `github-${Date.now()}`,
     Icon: FaGithub,
-    uril: "",
+    uri: "",
     color: "#fff",
   },
+  // {
+  //   id: `youtube-${Date.now()}`,
+  //   Icon: FaYoutube,
+  //   uri: "",
+  //   color: "#ff0000",
+  // },
   {
-    id: `youtube-${Date.now()}`,
-    Icon: FaYoutube,
-    uril: "",
-    color: "#ff0000",
+    id: `twitter-${Date.now()}`,
+    Icon: FaTwitter,
+    uri: "",
+    color: "#00acee",
   },
 ];
 
@@ -62,16 +69,16 @@ export const Menus = [
     name: "About",
   },
   {
-    id: `skills-${Date.now()}`,
-    Icon: FaRenren,
-    uri: "#skills",
-    name: "Skills",
-  },
-  {
     id: `projects-${Date.now()}`,
     Icon: FaDiagramProject,
     uri: "#projects",
     name: "Projects",
+  },
+  {
+    id: `skills-${Date.now()}`,
+    Icon: FaRenren,
+    uri: "#skills",
+    name: "Skills",
   },
   {
     id: `contact-${Date.now()}`,
