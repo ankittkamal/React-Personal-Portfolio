@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import HomeSocialLinks from "../components/HomeSocialLinks";
 import { Socials } from "../utils/helper";
+import { ankitkamalCV } from "../assets";
 
 function ContactMeSocials() {
   return (
@@ -36,7 +37,8 @@ function ContactMeSocials() {
         <div className="w-full text-primary flex flex-col justify-center items-center gap-3">
           <p className="text-primary mt-4  hover:text-secondary">Hire Me</p>
           <a
-            href="DownloadCV"
+            href={ankitkamalCV}
+            download="Ankit_Kamal_Resume.pdf"
             className=" border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
             group hover:border-primary"
             style={{ boxShadow: "inset 0px 0px 10px rgba(255,255,255,0.3)" }}
