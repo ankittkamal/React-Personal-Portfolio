@@ -113,7 +113,7 @@ const Contact = () => {
         Please contact me directly at{" "}
         <a className=" text-primary" href="mailto:ankittkamal@gmail.com">
           {" "}
-          ankittkamal@gmail{" "}
+          ankittkamal@gmail.com{" "}
         </a>{" "}
         or through this form.
       </p>

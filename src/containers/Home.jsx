@@ -75,7 +75,7 @@ const Home = () => {
         </motion.div>
 
         {/* hero image */}
-        <div className="h-80 w-80 rounded-full object-cover flex items-start justify-center lg:items-center m-4">
+        <div className="h-80 w-80 rounded-full object-cover flex items-start justify-center lg:items-center lg:m-4 lg:mx-2 mx-8">
           <motion.img
             initial={{ y: 0 }}
             animate={{ y: [-10, 10, -10] }}

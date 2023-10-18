@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <motion.div
-      className="fixed bottom-0 right-0 lg:top-0 w-full h-auto lg:h-screen lg:w-32 flex justify-center items-end lg:items-center pb-8 lg:pb-0 z-50 "
+      className="fixed lg:bottom-0 top-4 right-0 lg:top-0 w-full h-auto lg:h-screen lg:w-32 flex justify-center items-end lg:items-center pb-8 lg:pb-0 z-50 "
       initial={{ y: -500, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1 }}
