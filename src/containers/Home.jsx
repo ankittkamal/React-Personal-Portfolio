@@ -13,7 +13,12 @@ const Home = () => {
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
         {/* contect section */}
-        <div className=" w-full h-full flex flex-col items-center lg:items-start justify-center gap-4">
+        <motion.div
+          className=" w-full h-full flex flex-col items-center lg:items-start justify-center gap-4"
+          initial={{ y: -500, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+        >
           <h2 className="text-3xl lg:text-4xl text-texlight">
             Hello, It's me
             <span className="block tracking-wider text-4xl lg:text-6xl mt-4 text-white">
@@ -59,7 +64,7 @@ const Home = () => {
               Download CV{" "}
             </p>
           </a>
-        </div>
+        </motion.div>
 
         {/* hero image */}
         <div className="h-80 w-80 rounded-full object-cover flex items-start justify-center lg:items-center m-4">

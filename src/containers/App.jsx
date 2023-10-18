@@ -30,6 +30,9 @@ const App = () => {
       <Contact />
 
       {/* footer */}
+      <div className="w-full flex justify-start items-center flex-col">
+        <p className="text-texlight text-3xl tracking-wider">Ankit Kamal</p>
+      </div>
     </div>
   );
 };

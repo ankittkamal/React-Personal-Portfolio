@@ -67,6 +67,11 @@ const Projects = () => {
 
 const ProjectCard = ({ project }) => {
   const [isHoverred, setIsHoverred] = useState(false);
+
+  const handleGitHubLinkClick = () => {
+    window.open(project.gitURL, "_blank"); // This opens the link in a new tab.
+  };
+
   return (
     <motion.div
       key={project.id}
@@ -82,9 +87,9 @@ const ProjectCard = ({ project }) => {
       {isHoverred && (
         <motion.div className="absolute inset-0 backdrop-blur-md bg-[rgba(0,0,0,0.6)] flex flex-col items-center justify-center gap-2">
           <p className="text-xl text-primary">{project?.name}</p>
-          <a href={project?.gitURL} className="">
+          <div onClick={handleGitHubLinkClick}>
             <FaGithub className="text-white text-3xl hover:text-primary" />
-          </a>
+          </div>
         </motion.div>
       )}
     </motion.div>

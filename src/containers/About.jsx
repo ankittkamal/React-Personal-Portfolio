@@ -65,7 +65,7 @@ const About = () => {
           </p>
           <p className="text-texlight text-base tracking-wide text-justify">
             <span className="italic">When I'm not coding</span>, I enjoy playing
-            sports , watching movies, and spending time with my family. I also
+            sports, watching movies, and spending time with my family. I also
             enjoy <span className="font-medium">learning new things</span>. I am
             currently learning about{" "}
             <span className="font-medium">business and philosophy</span>. I'm

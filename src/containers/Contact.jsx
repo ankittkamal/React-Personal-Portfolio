@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { Leaf1, Leaf2 } from "../assets";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../config/firebase.config";
+import Alert from "./Alert";
 
 const Contact = () => {
   const [data, setdata] = useState({
@@ -9,6 +12,13 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const [alert, setAlert] = useState({
+    isAlert: false,
+    message: "",
+    status: null,
+  });
+
   const handleTextChange = (e) => {
     const { name, value } = e.target;
 
@@ -16,13 +26,72 @@ const Contact = () => {
     setdata((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const sendMessage = async () => {
+    const isEmailValid =
+      /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(data.email);
+
+    if (data.email === "" || data.email === null) {
+      // throw alert
+      setAlert({
+        isAlert: true,
+        message: "Required Fields can not be empty",
+        status: "warning",
+      });
+      setInterval(() => {
+        setAlert({ isAlert: false, message: "", status: null });
+      }, 4000);
+    } else if (!isEmailValid) {
+      // throw alert
+      setAlert({
+        isAlert: true,
+        message: "Email Address is not valid",
+        status: "warning",
+      });
+      setInterval(() => {
+        setAlert({ isAlert: false, message: "", status: null });
+      }, 4000);
+    } else {
+      await addDoc(collection(db, "messages"), { ...data })
+        .then(() => {
+          // throw that alert message
+          setdata({ firstName: "", lastName: "", email: "", message: "" });
+          setAlert({
+            isAlert: true,
+            message: "Thanks for contacting me",
+            status: "success",
+          });
+          setInterval(() => {
+            setAlert({ isAlert: false, message: "", status: null });
+          }, 4000);
+        })
+        .catch((err) => {
+          //throw alert
+          setAlert({
+            isAlert: true,
+            message: `Error: ${err.message}`,
+            status: "danger",
+          });
+          setInterval(() => {
+            setAlert({ isAlert: false, message: "", status: null });
+          }, 4000);
+        });
+    }
+  };
+
   return (
     <section
       id="contact"
       className="flex items-center justify-center flex-col gap-12 mt-36"
     >
+      {/* Toast Alert notification */}
+      <AnimatePresence>
+        {alert.isAlert && (
+          <Alert status={alert.status} message={alert.message} />
+        )}
+      </AnimatePresence>
+
       {/* title */}
-      <div className="w-full flex items-center justify-center ">
+      <div className="w-full flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, width: 0 }}
           animate={{ opacity: 1, width: 200 }}
@@ -73,13 +142,16 @@ const Contact = () => {
             value={data.message}
             onChange={handleTextChange}
             id=""
-            cols="30"
+            cols="0"
             rows="10"
             placeholder="Message here ..."
             className="w-full px-4 py-3 rounded-md border border-[rgba(255,255,255,0.3)] bg-transparent outline-none focus:border-primary hover:border-primary text-texlight"
           ></textarea>
-          <div className="w-full lg:w-auto flex items-center justify-center lg:justify-end">
-            <button className="px-12 py-3 bg-gradient-to-br from-primary to-secondary rounded-md text-base hover:bg-gradient-to-br  hover:from-black hover:to-black hover:border hover:border-primary hover:text-primary duration-200">
+          <div className="w-full flex items-center justify-center lg:justify-end">
+            <button
+              className="w-full lg:w-auto px-12 py-3 bg-gradient-to-br from-primary to-secondary rounded-md text-base hover:bg-gradient-to-br  hover:from-black hover:to-black hover:border hover:border-primary hover:text-primary duration-200"
+              onClick={sendMessage}
+            >
               Send
             </button>
           </div>
