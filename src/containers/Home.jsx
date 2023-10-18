@@ -1,9 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { Hero } from "../assets";
+import { ankitkamalCV, Hero } from "../assets";
 import HeroTypeWritter from "../components/HeroTypeWritter";
 import { Socials } from "../utils/helper";
 import HomeSocialLinks from "../components/HomeSocialLinks";
+import { BsArrow90DegUp } from "react-icons/bs";
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
           <h2 className="text-2xl lg:text-4xl text-texlight mt-4">
             And I'm{" "}
             <HeroTypeWritter
-              words={["a React Developer..", "a Full Stack Developer.."]}
+              words={["a React Developer.", "a Full-Stack Developer."]}
               speed={100}
             />
           </h2>
@@ -54,16 +55,23 @@ const Home = () => {
           </div>
 
           {/* hire me */}
-          <a
-            href="DownloadCV"
-            className="mt-12 border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
+          <div className="flex flex-col items-center">
+            <a
+              href={ankitkamalCV}
+              download="Ankit_Kamal_Resume.pdf"
+              className="mt-12 border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
             group hover:border-primary"
-            style={{ boxShadow: "inset 0px 0px 10px rgba(255,255,255,0.3)" }}
-          >
-            <p className="text-texlight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary">
-              Download CV{" "}
+              style={{ boxShadow: "inset 0px 0px 10px rgba(255,255,255,0.3)" }}
+            >
+              <p className="text-texlight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary">
+                Download CV{" "}
+              </p>
+            </a>
+
+            <p className="text-primary mt-4 flex flex-row hover:text-secondary text-xl">
+              <BsArrow90DegUp /> Hire Me
             </p>
-          </a>
+          </div>
         </motion.div>
 
         {/* hero image */}

@@ -6,10 +6,15 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
+import Footer from "./Footer";
+import ContactMeSocials from "./ContactMeSocials";
+import ParticlesContainer from "./ParticlesContainer";
+
 const App = () => {
   return (
-    <div className="w-full xl:w-[1500px] py-32 px-4 lg:px-12 pr-4 lg:pr-32">
+    <div className="w-full xl:w-[1500px] py-32 px-4 lg:px-12 pr-4 lg:pr-32 flex flex-col h-screen justify-between items-center ">
       {/* particle container */}
+      <ParticlesContainer />
 
       {/* header */}
       <Header />
@@ -29,10 +34,10 @@ const App = () => {
       {/* contact */}
       <Contact />
 
+      <ContactMeSocials />
+
       {/* footer */}
-      <div className="w-full flex justify-start items-center flex-col">
-        <p className="text-texlight text-3xl tracking-wider">Ankit Kamal</p>
-      </div>
+      <Footer />
     </div>
   );
 };

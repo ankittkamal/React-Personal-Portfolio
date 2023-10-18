@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Leaf1, Leaf2 } from "../assets";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../config/firebase.config";
+import { FaPaperPlane } from "react-icons/fa";
 import Alert from "./Alert";
 
 const Contact = () => {
@@ -81,7 +82,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex items-center justify-center flex-col gap-12 mt-36"
+      className="flex items-center justify-center flex-col gap-12 mt-44 mb-16"
     >
       {/* Toast Alert notification */}
       <AnimatePresence>
@@ -108,6 +109,14 @@ const Contact = () => {
       </div>
 
       {/* main content */}
+      <p className="mt-6  text-texlight text-base">
+        Please contact me directly at{" "}
+        <a className=" text-primary" href="mailto:ankittkamal@gmail.com">
+          {" "}
+          ankittkamal@gmail{" "}
+        </a>{" "}
+        or through this form.
+      </p>
       <div className=" w-full flex flex-col items-center justify-start gap-4">
         <div className="w-full lg:w-[600px] p-2 flex flex-col items-center justify-start gap-4">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -149,10 +158,13 @@ const Contact = () => {
           ></textarea>
           <div className="w-full flex items-center justify-center lg:justify-end">
             <button
-              className="w-full lg:w-auto px-12 py-3 bg-gradient-to-br from-primary to-secondary rounded-md text-base hover:bg-gradient-to-br  hover:from-black hover:to-black hover:border hover:border-primary hover:text-primary duration-200"
+              className=" group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-700 text-white rounded-full outline-none transition-all focus:scale-110 hover:border-primary hover:text-primary  active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
               onClick={sendMessage}
             >
-              Send
+              <>
+                Submit{" "}
+                <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+              </>
             </button>
           </div>
         </div>

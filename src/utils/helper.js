@@ -32,13 +32,13 @@ export const Socials = [
   {
     id: `linkedin-${Date.now()}`,
     Icon: FaLinkedinIn,
-    uri: "",
+    uri: "https://www.linkedin.com/in/ankit-kamal-57786419b/",
     color: "#0072b1",
   },
   {
     id: `github-${Date.now()}`,
     Icon: FaGithub,
-    uri: "",
+    uri: "https://github.com/ankittkamal",
     color: "#fff",
   },
   // {
@@ -50,7 +50,7 @@ export const Socials = [
   {
     id: `twitter-${Date.now()}`,
     Icon: FaTwitter,
-    uri: "",
+    uri: "https://twitter.com/ankittkamall",
     color: "#00acee",
   },
 ];
@@ -117,7 +117,7 @@ export const ProjectsData = [
     id: `imageSharing-${Date.now()}`,
     name: "Image Sharing App",
     imgSrc: ImageSharing,
-    gitURL: "https://github.com/Vetrivel-VP",
+    gitURL: "https://github.com/ankittkamal",
   },
   {
     id: `pixabayclone-${Date.now()}`,
@@ -129,7 +129,7 @@ export const ProjectsData = [
     id: `freshjuiceui-${Date.now()}`,
     name: "Fresh Juice UI Build",
     imgSrc: FreshJuiceUI,
-    gitURL: "https://github.com/Vetrivel-VP",
+    gitURL: "https://github.com/ankittkamal",
   },
   {
     id: `FlightServiceService-${Date.now()}`,

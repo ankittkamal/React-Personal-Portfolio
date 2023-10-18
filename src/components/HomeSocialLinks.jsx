@@ -3,10 +3,15 @@ import React, { useState } from "react";
 
 const HomeSocialLinks = ({ data, index }) => {
   const [isHoverred, setIsHoverred] = useState(false);
+
+  const handleSocialsLinkClick = () => {
+    window.open(data.uri, "_blank"); // This opens the link in a new tab.
+  };
+
   return (
-    <motion.a
+    <motion.div
       key={index}
-      href={data.uri}
+      onClick={handleSocialsLinkClick}
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 25 }}
@@ -25,7 +30,7 @@ const HomeSocialLinks = ({ data, index }) => {
           <data.Icon className={`text-texlight`}></data.Icon>
         </div>
       </AnimatePresence>
-    </motion.a>
+    </motion.div>
   );
 };
 
