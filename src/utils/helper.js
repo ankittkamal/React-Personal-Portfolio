@@ -11,14 +11,14 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import {
-  ChatApp,
-  CodePenClone,
+  MoneyTracker,
+  NetflixGPT,
+  FoodExplorer,
+  ReactRestaurant,
   FreshJuiceUI,
   ImageSharing,
-  OpenAI,
   PixabayClone,
   PortfolioFirebase,
-  RestaurantClone,
   SocialMedia,
 } from "../assets";
 
@@ -63,16 +63,10 @@ export const Menus = [
     name: "Home",
   },
   {
-    id: `about-${Date.now()}`,
-    Icon: FaUser,
-    uri: "#about",
-    name: "About",
-  },
-  {
     id: `projects-${Date.now()}`,
     Icon: FaDiagramProject,
     uri: "#projects",
-    name: "Projects",
+    name: "My Projects",
   },
   {
     id: `skills-${Date.now()}`,
@@ -81,37 +75,43 @@ export const Menus = [
     name: "Skills",
   },
   {
+    id: `about-${Date.now()}`,
+    Icon: FaUser,
+    uri: "#about",
+    name: "About Me",
+  },
+  {
     id: `contact-${Date.now()}`,
     Icon: FaEnvelope,
     uri: "#contact",
-    name: "Contact",
+    name: "Contact Me",
   },
 ];
 
 export const ProjectsData = [
   {
-    id: `food-${Date.now()}`,
-    name: "Single Food Restaurant",
-    imgSrc: RestaurantClone,
-    gitURL: "https://github.com/Vetrivel-VP",
+    id: `FoodExplorer-${Date.now()}`,
+    name: "Food Explorer ",
+    imgSrc: FoodExplorer,
+    gitURL: "https://github.com/ankittkamal/Food-Explorer",
   },
   {
-    id: `codepen-${Date.now()}`,
-    name: "CodePen Clone",
-    imgSrc: CodePenClone,
-    gitURL: "https://github.com/Vetrivel-VP",
+    id: `NetflixGPT-${Date.now()}`,
+    name: "NetflixGPT ",
+    imgSrc: NetflixGPT,
+    gitURL: "https://github.com/ankittkamal/NetflixGPT",
   },
   {
-    id: `openai-${Date.now()}`,
-    name: "OpenAI",
-    imgSrc: OpenAI,
-    gitURL: "https://github.com/Vetrivel-VP",
+    id: `ReactRestaurant-${Date.now()}`,
+    name: "Pizza Restaurant Food WebApp",
+    imgSrc: ReactRestaurant,
+    gitURL: "https://github.com/ankittkamal/react-pizza-restaurant",
   },
   {
     id: `chatapp-${Date.now()}`,
-    name: "Chat App Build",
-    imgSrc: ChatApp,
-    gitURL: "https://github.com/Vetrivel-VP",
+    name: "Money Tracker App",
+    imgSrc: MoneyTracker,
+    gitURL: "https://github.com/ankittkamal/Money-Tracker",
   },
   {
     id: `imageSharing-${Date.now()}`,
@@ -121,9 +121,9 @@ export const ProjectsData = [
   },
   {
     id: `pixabayclone-${Date.now()}`,
-    name: "Pixabay Clone 2.0",
+    name: "CinemixGlobal",
     imgSrc: PixabayClone,
-    gitURL: "https://github.com/Vetrivel-VP",
+    gitURL: "https://github.com/ankittkamal/CinemixGlobal",
   },
   {
     id: `freshjuiceui-${Date.now()}`,
@@ -132,15 +132,37 @@ export const ProjectsData = [
     gitURL: "https://github.com/Vetrivel-VP",
   },
   {
-    id: `socialmedia-${Date.now()}`,
-    name: "Social Media App",
+    id: `FlightServiceService-${Date.now()}`,
+    name: "Flight Booking Service Service - Backend Project",
     imgSrc: SocialMedia,
-    gitURL: "https://github.com/Vetrivel-VP",
+    gitURL: "https://github.com/ankittkamal/Flight-Booking-Service-System",
   },
   {
     id: `portfoliofirebase-${Date.now()}`,
     name: "Portfolio UI Fireabse",
     imgSrc: PortfolioFirebase,
-    gitURL: "https://github.com/Vetrivel-VP",
+    gitURL: "https://github.com/ankittkamal/React-Personal-Portfolio",
   },
+];
+
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Material UI",
+  "React",
+  "Git",
+  "Tailwind CSS",
+  "Docker",
+  "MongoDB",
+  "Redux",
+  "Github",
+  "Firebase",
+  "Rest API",
+  "Node.js",
+  "Express",
+  "MySQL",
+  "Github",
+  "Postman",
+  "Framer Motion",
 ];
