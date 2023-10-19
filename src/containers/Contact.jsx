@@ -5,6 +5,8 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../config/firebase.config";
 import { FaPaperPlane } from "react-icons/fa";
 import Alert from "./Alert";
+import { Socials } from "../utils/helper";
+import HomeSocialLinks from "../components/HomeSocialLinks";
 
 const Contact = () => {
   const [data, setdata] = useState({
@@ -111,7 +113,10 @@ const Contact = () => {
       {/* main content */}
       <p className="mt-6  text-texlight text-base">
         Please contact me directly at{" "}
-        <a className=" text-primary" href="mailto:ankittkamal@gmail.com">
+        <a
+          className=" text-slate-200 hover:text-primary"
+          href="mailto:ankittkamal@gmail.com"
+        >
           {" "}
           ankittkamal@gmail.com{" "}
         </a>{" "}
@@ -158,7 +163,7 @@ const Contact = () => {
           ></textarea>
           <div className="w-full flex items-center justify-center lg:justify-end">
             <button
-              className=" group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-700 text-white rounded-full outline-none transition-all focus:scale-110 hover:border-primary hover:text-primary  active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+              className=" group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-700 text-white rounded-full outline-none transition-all focus:scale-110 border hover:border-primary hover:text-primary  active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65 border-[rgba(255,255,255,0.3)]"
               onClick={sendMessage}
             >
               <>
@@ -166,6 +171,14 @@ const Contact = () => {
                 <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
               </>
             </button>
+          </div>
+          <div className="flex items-center justify-center gap-16 mt-16">
+            <AnimatePresence>
+              {Socials &&
+                Socials.map((item, index) => (
+                  <HomeSocialLinks key={index} data={item} index={index} />
+                ))}
+            </AnimatePresence>
           </div>
         </div>
       </div>

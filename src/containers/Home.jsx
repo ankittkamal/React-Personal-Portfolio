@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { ankitkamalCV, Hero } from "../assets";
+import { AnkitKamalCV, Hero } from "../assets";
 import HeroTypeWritter from "../components/HeroTypeWritter";
 import { Socials } from "../utils/helper";
 import HomeSocialLinks from "../components/HomeSocialLinks";
@@ -37,11 +37,12 @@ const Home = () => {
             />
           </h2>
           <p className="text-base text-texlight mt-6 text-center lg:text-left">
-            I'm a tech enthusiast with a strong grasp of{" "}
-            <span className="font-bold">full stack development.</span>{" "}
-            <span>I enjoy </span>
-            building <span className="italic">sites & apps</span>. My focus is{" "}
-            <span className="underline">React (Next.js)</span>.
+            I'm a tech enthusiast, eager to expand my skills and knowledge and
+            In the process of mastering{" "}
+            <span className="font-bold">full-stack development,</span>{" "}
+            <span>with a strong focus on </span>
+            <span className="underline">React (Next.js)</span>{" "}
+            <span> as my foundation.</span>
           </p>
 
           {/* socials link */}
@@ -57,7 +58,7 @@ const Home = () => {
           {/* hire me */}
           <div className="flex flex-col items-center">
             <a
-              href={ankitkamalCV}
+              href={AnkitKamalCV}
               download="Ankit_Kamal_Resume.pdf"
               className="mt-12 border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
             group hover:border-primary"
@@ -75,7 +76,7 @@ const Home = () => {
         </motion.div>
 
         {/* hero image */}
-        <div className="h-80 w-80 rounded-full object-cover flex items-start justify-center lg:items-center lg:m-4 lg:mx-2 mx-8">
+        <div className="lg:h-80 lg:w-80 h-60 w-60 rounded-full object-cover flex items-start justify-center lg:items-center lg:m-4  mx-16 mt-2">
           <motion.img
             initial={{ y: 0 }}
             animate={{ y: [-10, 10, -10] }}

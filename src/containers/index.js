@@ -1,6 +1,5 @@
 export { default as App } from "./App";
 export { default as Header } from "./Header";
-export { default as ServiceCount } from "./ServiceCount";
 
 export { default as Home } from "./Home";
 export { default as About } from "./About";

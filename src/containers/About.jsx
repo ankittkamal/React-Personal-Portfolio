@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex items-center justify-center flex-col gap-12 mt-44"
+      className="flex items-center justify-center flex-col gap-12 mt-20"
     >
       {/* title */}
       <div className="w-full flex items-center justify-center py-10">
@@ -19,7 +19,7 @@ const About = () => {
         >
           <img src={Leaf1} className="w-6 h-auto object-contain" alt="" />
           <p className="text-transparent text-xl bg-clip-text bg-gradient-to-r from-primary to-secondary">
-            About
+            About Me
           </p>
           <img src={Leaf2} className="w-6 h-auto object-contain" alt="" />
         </motion.div>

@@ -13,7 +13,7 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      delay: 0.08 * index,
     },
   }),
 };
@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex items-center justify-center flex-col gap-12 mt-36"
+      className="flex items-center justify-center flex-col gap-12 lg:mt-36 mt-16"
     >
       {/* title */}
       <div className="w-full flex items-center justify-center py-12">
@@ -42,7 +42,7 @@ const Projects = () => {
       </div>
 
       {/* main content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:w-full w-80">
         <AnimatePresence>
           {ProjectsData &&
             ProjectsData.map((project, index) => (

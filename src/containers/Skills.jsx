@@ -25,7 +25,7 @@ const Skills = () => {
         className="flex items-center justify-center text-center flex-col gap-12 mt-24 max-w-[53rem]"
       >
         {/* title */}
-        <div className="w-full flex items-center justify-center  py-16">
+        <div className="w-full flex items-center justify-center  py-8">
           <motion.div
             initial={{ opacity: 0, width: 0 }}
             animate={{ opacity: 1, width: 200 }}
@@ -46,7 +46,8 @@ const Skills = () => {
         <ul className="flex flex-wrap flex-row-4 justify-center gap-2 text-lg text-gray-800">
           {skillsData.map((skill, index) => (
             <motion.li
-              className="bg-gray-400 hover:bg-gray-800 borderBlack rounded-xl px-5 py-4 text-slate-50"
+              className="bg-gray-400 hover:bg-gray-800 borderBlack rounded-xl lg:px-5 px-3 lg:py-4  
+              py-3 text-slate-50"
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"
