@@ -1,5 +1,5 @@
-import { AnkitKamalCV } from "../assets";
 import { BsArrow90DegDown } from "react-icons/bs";
+import { AnkitKamalCV } from "../assets";
 
 function ContactMeSocials() {
   return (

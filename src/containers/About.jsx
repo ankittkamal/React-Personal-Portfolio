@@ -40,8 +40,8 @@ const About = () => {
         </div>
 
         {/* content */}
-        <section className="w-full px-8 flex flex-col gap-4 items-start justify-start">
-          <p className="text-texlight text-base tracking-wide text-justify">
+        <section className="w-full px-8 flex flex-col gap-4 items-start justify-start ">
+          <p className="text-texlight hover:text-primary text-base tracking-wide text-justify">
             After graduating with a degree in{" "}
             <span className="font-medium">
               Bachelor of Technology in Computer Science Engineering
@@ -53,7 +53,7 @@ const About = () => {
             <span className="underline">love</span> the feeling of finally
             figuring out a solution to a problem.
           </p>
-          <p className="text-texlight text-base tracking-wide text-justify">
+          <p className="text-texlight hover:text-primary text-base tracking-wide text-justify">
             My core stack is{" "}
             <span className="font-medium">
               React, Node.js, Express.js and MongoDB
@@ -63,7 +63,7 @@ const About = () => {
             <span className="font-medium ">full-time position</span> as a
             software developer.
           </p>
-          <p className="text-texlight text-base tracking-wide text-justify">
+          <p className="text-texlight hover:text-primary text-base tracking-wide text-justify">
             <span className="italic">When I'm not coding</span>, I enjoy playing
             sports , watching movies, and spending time with my family. I also
             enjoy <span className="font-medium">learning new things</span>. I am
