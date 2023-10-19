@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { AnkitKamalCV, Hero } from "../assets";
+import { AnkitKamalResume, Hero } from "../assets";
 import HeroTypeWritter from "../components/HeroTypeWritter";
 import { Socials } from "../utils/helper";
 import HomeSocialLinks from "../components/HomeSocialLinks";
@@ -58,7 +58,7 @@ const Home = () => {
           {/* hire me */}
           <div className="flex flex-col items-center">
             <a
-              href={AnkitKamalCV}
+              href={AnkitKamalResume}
               download="Ankit_Kamal_Resume.pdf"
               className="mt-12 border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
             group hover:border-primary"

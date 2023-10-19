@@ -11,4 +11,4 @@ export { default as NetflixGPT } from "./img/Project/NetflixGPT.png";
 export { default as FoodExplorer } from "./img/Project/FoodExplorer.png";
 export { default as ReactRestaurant } from "./img/Project/ReactRestaurant.png";
 export { default as MoneyTracker } from "./img/Project/MoneyTracker.png";
-export { default as AnkitKamalCV } from "./AnkitKamalCV.pdf";
+export { default as AnkitKamalResume } from "./Ankit_Kamal_Resume.pdf";

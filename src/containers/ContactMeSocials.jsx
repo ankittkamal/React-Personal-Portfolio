@@ -1,5 +1,5 @@
 import { BsArrow90DegDown } from "react-icons/bs";
-import { AnkitKamalCV } from "../assets";
+import { AnkitKamalResume } from "../assets";
 
 function ContactMeSocials() {
   return (
@@ -25,7 +25,7 @@ function ContactMeSocials() {
             <BsArrow90DegDown /> <p className="-my-4"> Hire Me</p>
           </span>
           <a
-            href={AnkitKamalCV}
+            href={AnkitKamalResume}
             download="Ankit_Kamal_Resume.pdf"
             className="mt-2 border border-[rgba(255,255,255,0.3)]  rounded-xl px-8 py-3 active:95 
             group hover:border-primary"
