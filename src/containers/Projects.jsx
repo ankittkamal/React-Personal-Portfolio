@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Leaf1, Leaf2 } from "../assets";
 import { ProjectsData } from "../utils/helper";
 import { FaGithub } from "react-icons/fa6";
+import { GoLinkExternal } from "react-icons/go";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -71,6 +72,9 @@ const ProjectCard = ({ project }) => {
   const handleGitHubLinkClick = () => {
     window.open(project.gitURL, "_blank"); // This opens the link in a new tab.
   };
+  const handleDemoLinkClick = () => {
+    window.open(project?.demoURL, "_blank"); // This opens the link in a new tab.
+  };
 
   return (
     <motion.div
@@ -85,10 +89,17 @@ const ProjectCard = ({ project }) => {
         className="w-full h-full object-contain rounded-lg"
       />
       {isHoverred && (
-        <motion.div className="absolute inset-0 backdrop-blur-md bg-[rgba(0,0,0,0.6)] flex flex-col items-center justify-center gap-2">
+        <motion.div className="absolute inset-0 backdrop-blur-md bg-[rgba(0,0,0,0.6)] flex flex-col items-center justify-center gap-2 ">
           <p className="text-xl text-primary">{project?.name}</p>
-          <div onClick={handleGitHubLinkClick}>
-            <FaGithub className="text-white text-3xl hover:text-primary" />
+          <div className="flex gap-4 ">
+            {project.demoURL && (
+              <div onClick={handleDemoLinkClick}>
+                <GoLinkExternal className="text-white text-3xl hover:text-primary mt-2" />
+              </div>
+            )}
+            <div onClick={handleGitHubLinkClick}>
+              <FaGithub className="text-white text-3xl hover:text-primary mt-2" />
+            </div>
           </div>
         </motion.div>
       )}

@@ -13,10 +13,11 @@ import {
 import {
   MoneyTracker,
   NetflixGPT,
-  FoodExplorer,
   ReactRestaurant,
   PortfolioFirebase,
   SocialMedia,
+  ReactEats,
+  Mapty,
 } from "../assets";
 
 export const Socials = [
@@ -87,22 +88,25 @@ export const Menus = [
 
 export const ProjectsData = [
   {
-    id: `FoodExplorer-${Date.now()}`,
-    name: "Food Explorer ",
-    imgSrc: FoodExplorer,
-    gitURL: "https://github.com/ankittkamal/Food-Explorer",
+    id: `ReactEats-${Date.now()}`,
+    name: "React Eats ",
+    imgSrc: ReactEats,
+    gitURL: "https://github.com/ankittkamal/ReactEats",
+    demoURL: "https://react-eats.vercel.app/",
   },
   {
     id: `NetflixGPT-${Date.now()}`,
     name: "NetflixGPT ",
     imgSrc: NetflixGPT,
     gitURL: "https://github.com/ankittkamal/NetflixGPT",
+    demoURL: "https://netflixgpt-ff483.web.app/",
   },
   {
     id: `ReactRestaurant-${Date.now()}`,
     name: "Pizza Restaurant Food WebApp",
     imgSrc: ReactRestaurant,
     gitURL: "https://github.com/ankittkamal/react-pizza-restaurant",
+    demoURL: "https://react-pizza-restaurant-webapp.vercel.app/",
   },
   {
     id: `moneyTracker-${Date.now()}`,
@@ -110,17 +114,27 @@ export const ProjectsData = [
     imgSrc: MoneyTracker,
     gitURL: "https://github.com/ankittkamal/Money-Tracker",
   },
+  // {
+  //   id: `FlightServiceService-${Date.now()}`,
+  //   name: " Flight Booking Service",
+  //   imgSrc: SocialMedia,
+  //   gitURL: "https://github.com/ankittkamal/Flight-Booking-Service-System",
+  // },
+
   {
-    id: `FlightServiceService-${Date.now()}`,
-    name: " Flight Booking Service",
-    imgSrc: SocialMedia,
-    gitURL: "https://github.com/ankittkamal/Flight-Booking-Service-System",
+    id: `mapty-${Date.now()}`,
+    name: "Mapty - Track Workout",
+    imgSrc: Mapty,
+    gitURL: "https://github.com/ankittkamal/Mapty",
+    demoURL: "https://mapty-gilt.vercel.app/",
   },
+
   {
     id: `portfoliofirebase-${Date.now()}`,
     name: "Portfolio UI Fireabse",
     imgSrc: PortfolioFirebase,
     gitURL: "https://github.com/ankittkamal/React-Personal-Portfolio",
+    demoURL: "https://ankittkamal-d5e97.web.app/",
   },
 ];
 

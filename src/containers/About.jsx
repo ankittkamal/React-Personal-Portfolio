@@ -44,11 +44,11 @@ const About = () => {
           <p className="text-texlight hover:text-primary text-base tracking-wide text-justify">
             After graduating with a degree in{" "}
             <span className="font-medium">
-              Bachelor of Technology in Computer Science Engineering
-            </span>
-            , I learned{" "}
-            <span className="font-medium">full-stack web development</span>.{" "}
-            <span className="italic">My favorite part of programming</span> is
+              Bachelor of Technology in Computer Science Engineering,
+            </span>{" "}
+            I learned
+            <span className="font-medium"> full-stack web development</span>.
+            <span className="italic"> My favorite part of programming</span> is
             the problem-solving aspect. I{" "}
             <span className="underline">love</span> the feeling of finally
             figuring out a solution to a problem.
