@@ -15,7 +15,6 @@ import {
   NetflixGPT,
   ReactRestaurant,
   PortfolioFirebase,
-  SocialMedia,
   ReactEats,
   Mapty,
 } from "../assets";
